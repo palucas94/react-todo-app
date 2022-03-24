@@ -34,7 +34,7 @@ function Form({ inputText, setInputText, todoList, setTodoList }) {
           type='submit'
           onClick={ submitHandler }
         >
-          <i class="fa-regular fa-square-plus"></i>
+          <i className="fa-regular fa-square-plus"></i>
         </button>
       </form>
     </div>  

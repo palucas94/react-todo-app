@@ -11,7 +11,7 @@ function TodoItem({ item, todoList, setTodoList }) {
       return i;
     }));
   };
-
+  
   const deleteHandler = () => {
     setTodoList(todoList.filter((i) => i.id !== id ));
   };
@@ -23,13 +23,13 @@ function TodoItem({ item, todoList, setTodoList }) {
         className="complete-button"
         onClick={ completeHandler }
       >
-        <i class="fa-solid fa-check"></i>
+        <i className="fa-solid fa-check"></i>
       </button>
       <button
         className="delete-button"
         onClick={ deleteHandler }
       >
-        <i class="fa-regular fa-trash-can"></i>
+        <i className="fa-regular fa-trash-can"></i>
       </button>
     </div>
   );
