@@ -117,6 +117,11 @@ body {
   opacity: 0.5;
 }
 
+.deleted {
+  transform: translateY(8rem) rotateZ(30deg);
+  opacity: 0;
+}
+
 .buttons-wrapper {
   flex-grow: 1;
   display: flex;
