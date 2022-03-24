@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import FilterButtons from './components/FilterButtons';
+import Socials from './components/Socials';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -58,6 +59,7 @@ function App() {
           <FilterButtons setStatus={ setStatus }/>
         </div>
       </div>
+      <Socials />
     </div>
   );
 }
