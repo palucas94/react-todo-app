@@ -7,7 +7,7 @@ function FilterButtons({ setStatus }) {
 
   return (
     <div className="buttons-container">
-      <div className="butttons-wrapper">
+      <div className="buttons-wrapper">  
         <button type='button' value='all' onClick={ statusHandler }>All</button>
         <button type='button' value='active' onClick={ statusHandler }>Active</button>
         <button type='button' value='completed' onClick={ statusHandler }>Completed</button>

@@ -48,12 +48,16 @@ function App() {
         todoList={ todoList }
         setTodoList={ setTodoList }
       />
-      <TodoList
-        todoList={ todoList }
-        setTodoList={ setTodoList }
-        filteredList={ filteredList }
-      />
-      <FilterButtons setStatus={ setStatus }/>
+      <div className='main-container'>
+        <div className='main-wrapper'>
+          <TodoList
+            todoList={ todoList }
+            setTodoList={ setTodoList }
+            filteredList={ filteredList }
+          />
+          <FilterButtons setStatus={ setStatus }/>
+        </div>
+      </div>
     </div>
   );
 }

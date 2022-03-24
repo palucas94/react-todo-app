@@ -1,1 +1,137 @@
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-image: linear-gradient( 165deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+}
+
+.header-title {
+  font-size: 2rem;
+}
+
+.header-container,
+.main-container,
+.form-container,
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh;
+}
+
+.form-input,
+.form-button {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border: none;
+  background: white;
+}
+
+.form-input {
+  border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.form-button {
+  cursor: pointer;
+  color: rgba(36,163,190,1);
+  border-radius: 0 0.7rem 0.7rem 0;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  color: white;
+  background: rgba(36,163,190,1);
+}
+
+.main-wrapper {
+  min-width: 33%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.item-wrapper {
+  flex-grow: 1;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.item-container {
+  margin: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  border: 0.1rem solid white;
+  border-radius: 1rem;
+}
+
+.todo-item {
+  flex-grow: 1;
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash-can,
+.fa-check {
+  pointer-events: none;
+}
+
+.complete-button,
+.delete-button {
+  cursor: pointer;
+  color: white;
+  background: none;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.delete-button {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.complete-button:hover {
+  color: rgba(36,163,190,1);
+  background: white;
+}
+
+.delete-button:hover {
+  color: rgba(36,163,190,1);
+  background: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.buttons-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buttons-wrapper button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem;
+}
+
+.buttons-wrapper button:hover {
+  border-bottom: 0.1rem solid white;
+}
