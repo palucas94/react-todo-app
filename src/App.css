@@ -19,7 +19,8 @@ body {
 .header-container,
 .main-container,
 .form-container,
-.buttons-container {
+.buttons-container,
+.socials-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,4 +135,17 @@ body {
 
 .buttons-wrapper button:hover {
   border-bottom: 0.1rem solid white;
+}
+
+.socials-container {
+  font-size: 2rem;
+}
+
+.social-item {
+  color: white;
+  padding: 0.5rem;
+}
+
+.social-item:hover {
+  color: black;
 }
