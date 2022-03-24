@@ -12,6 +12,10 @@ function App() {
   const [filteredList, setFilteredList] = useState([]);
 
   useEffect(() => {
+    getListFromStorage();
+  }, []);
+
+  useEffect(() => {
     switch (status) {
       case 'active':
         setFilteredList(todoList.filter((t) => t.completed === false ));
@@ -22,7 +26,18 @@ function App() {
       default:
         setFilteredList(todoList);
     }
+
+    localStorage.setItem('todoList', JSON.stringify(todoList));
   }, [status, todoList]);
+
+  const getListFromStorage = () => {
+    if (localStorage.getItem('todoList') === null) {
+      localStorage.setItem('todoList', JSON.stringify([]));
+    } else {
+      const list = JSON.parse(localStorage.getItem('todoList'));
+      setTodoList(list);
+    }
+  }
 
   return (
     <div className="App">
