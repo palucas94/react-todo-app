@@ -22,7 +22,7 @@ function TodoItem({ item, todoList, setTodoList }) {
   };
 
   const onTransitionEnd = (id) => {
-    setTodoList(todoList.filter((i) => i.id !== id ));
+    setTodoList(todoList.filter((i) => i.deleted !== true ));
   };
 
   return (
