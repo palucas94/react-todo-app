@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
+import FilterButtons from './components/FilterButtons';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -21,6 +22,7 @@ function App() {
         todoList={ todoList }
         setTodoList={ setTodoList }
       />
+      <FilterButtons />
     </div>
   );
 }
