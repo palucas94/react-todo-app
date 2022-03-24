@@ -1,12 +1,16 @@
 import React from 'react';
 
-function FilterButtons() {
+function FilterButtons({ setStatus }) {
+  const statusHandler = ({ target: { value } }) => {
+    setStatus(value);
+  };
+
   return (
     <div className="buttons-container">
       <div className="butttons-wrapper">
-        <button type='button' value='all'>All</button>
-        <button type='button' value='active'>Active</button>
-        <button type='button' value='completed'>Completed</button>
+        <button type='button' value='all' onClick={ statusHandler }>All</button>
+        <button type='button' value='active' onClick={ statusHandler }>Active</button>
+        <button type='button' value='completed' onClick={ statusHandler }>Completed</button>
       </div>
     </div>
   );

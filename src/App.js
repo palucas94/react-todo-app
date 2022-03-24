@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Form from './components/Form';
@@ -8,6 +8,21 @@ import FilterButtons from './components/FilterButtons';
 function App() {
   const [inputText, setInputText] = useState('');
   const [todoList, setTodoList] = useState([]);
+  const [status, setStatus] = useState('all');
+  const [filteredList, setFilteredList] = useState([]);
+
+  useEffect(() => {
+    switch (status) {
+      case 'active':
+        setFilteredList(todoList.filter((t) => t.completed === false ));
+        break;
+      case 'completed':
+        setFilteredList(todoList.filter((t) => t.completed === true ));
+        break;
+      default:
+        setFilteredList(todoList);
+    }
+  }, [status, todoList]);
 
   return (
     <div className="App">
@@ -21,8 +36,9 @@ function App() {
       <TodoList
         todoList={ todoList }
         setTodoList={ setTodoList }
+        filteredList={ filteredList }
       />
-      <FilterButtons />
+      <FilterButtons setStatus={ setStatus }/>
     </div>
   );
 }
