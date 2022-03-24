@@ -25,7 +25,7 @@ function App() {
         break;
       default:
         setFilteredList(todoList);
-    }
+    };
 
     localStorage.setItem('todoList', JSON.stringify(todoList));
   }, [status, todoList]);
@@ -37,7 +37,7 @@ function App() {
       const list = JSON.parse(localStorage.getItem('todoList'));
       setTodoList(list);
     }
-  }
+  };
 
   return (
     <div className="App">

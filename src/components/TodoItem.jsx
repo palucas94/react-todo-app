@@ -19,8 +19,18 @@ function TodoItem({ item, todoList, setTodoList }) {
   return (
     <div className={`item-container ${completed ? 'completed' : ''} `}>
       <li className="todo-item" key={ id }>{ text }</li>
-      <button className="complete-button" onClick={ completeHandler }>Complete</button>
-      <button className="delete-button" onClick={ deleteHandler }>Delete</button>
+      <button
+        className="complete-button"
+        onClick={ completeHandler }
+      >
+        <i class="fa-solid fa-check"></i>
+      </button>
+      <button
+        className="delete-button"
+        onClick={ deleteHandler }
+      >
+        <i class="fa-regular fa-trash-can"></i>
+      </button>
     </div>
   );
 }
