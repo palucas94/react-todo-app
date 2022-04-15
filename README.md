@@ -15,7 +15,7 @@
 
 ### Objectives
 
-This app was created for the user to able to:
+This app was created for the user to be able to:
 
 - Add new todos to the list
 - Mark todos as complete
